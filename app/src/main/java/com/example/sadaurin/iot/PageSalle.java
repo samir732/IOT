@@ -16,30 +16,16 @@ public class PageSalle extends AppCompatActivity {
 
     String[] values1 = {
             "101", "102", "103", "1024"};
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
-
-
-
-
         setContentView(R.layout.activity_page_salle);
-
-
-
-
         mListeView = (ListView) findViewById(R.id.lst3);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(PageSalle.this,android.R.layout.simple_expandable_list_item_1,values1);
         mListeView.setAdapter(adapter);
-
-
-
-
-
-
-
     }
 
 

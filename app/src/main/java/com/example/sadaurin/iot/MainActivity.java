@@ -21,15 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-      //  ImageView p =(ImageView) findViewById(R.id.imagevert);
-
-String url ="https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes";
-
-HttpHandler reponseWebService =new HttpHandler(url,this.getBaseContext());
-
+        String url ="https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes";
+        HttpHandler reponseWebService =new HttpHandler();
+        reponseWebService.lancementWebSerivice(url,this.getBaseContext());
     }
+
     public void batiment(View view) {
         Intent mp = new Intent(MainActivity.this,PageBatiment.class);
         startActivity(mp);

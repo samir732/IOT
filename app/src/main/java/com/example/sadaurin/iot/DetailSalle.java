@@ -1,8 +1,9 @@
 package com.example.sadaurin.iot;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DetailSalle extends AppCompatActivity {
@@ -11,20 +12,14 @@ public class DetailSalle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_salle);
+        Intent intent = getIntent();
+        String sal = intent.getStringExtra("salle");
+        String bat= intent.getStringExtra("bat");
 
-        final CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
-        checkBox.setChecked(false);
+        TextView batiment = (TextView)findViewById(R.id.textView3);
+        batiment.setText(bat);
 
-        if (checkBox.isChecked()) {
-            CharSequence text = "Ajouter ce batiment au favories ";
-
-
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(getBaseContext(), text, duration);
-            toast.show();
-           // checkBox.setChecked(false);
-        }
-
+        TextView salle = (TextView)findViewById(R.id.textView6);
+        salle.setText("Salle " + sal);
     }
 }

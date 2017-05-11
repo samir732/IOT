@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
 
     <LinearLayout
@@ -26,18 +25,15 @@
             android:layout_height="73dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/arrow"
+            android:src="@drawable/aaa"/>
 
-            />
         <ImageView
             android:id="@+id/imagevert"
             android:layout_width="match_parent"
             android:layout_height="73dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/vert"
-
-            />
+            android:src="@drawable/bbb"/>
 
     </LinearLayout>
 
